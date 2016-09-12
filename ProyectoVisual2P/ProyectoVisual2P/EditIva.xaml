@@ -1,0 +1,22 @@
+﻿<Window x:Name="frmEditIva" x:Class="EditIva"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Edición del IVA por Provincia" Height="240" Width="300" MinWidth="300" MinHeight="240" MaxWidth="300" MaxHeight="240" WindowStartupLocation="CenterScreen" Icon="Resources/Icono.png" Background="#FFFFFAEE">
+    <Grid MinWidth="292" MaxWidth="292" MinHeight="270" MaxHeight="270">
+        <Label x:Name="lblProvincia" Content="Provincia:" HorizontalAlignment="Left" Margin="36,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblIva" Content="I.V.A.:" HorizontalAlignment="Left" Margin="36,77,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtIva" Text="{Binding IVA}" HorizontalAlignment="Left" Height="23" Margin="131,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtProvincia" Text="{Binding Provincia}" HorizontalAlignment="Left" Height="23" Margin="131,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnCancelar" Width="41" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Margin="205,141,46,89" MinWidth="41" MinHeight="40" MaxWidth="41" MaxHeight="40">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Cancel.png" HorizontalAlignment="Left" Stretch="UniformToFill" MinWidth="36" MaxWidth="36" MinHeight="34" MaxHeight="34"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnAceptar" Width="42" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Margin="120,141,0,89" HorizontalAlignment="Left" MinWidth="41" MinHeight="40" MaxWidth="41" MaxHeight="40">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Accept.png" HorizontalAlignment="Left" Stretch="UniformToFill" MinWidth="36" MaxWidth="36" MinHeight="34" MaxHeight="34"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

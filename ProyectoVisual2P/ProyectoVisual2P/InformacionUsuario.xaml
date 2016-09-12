@@ -1,0 +1,34 @@
+﻿<Window x:Name="frmInformacionUser" x:Class="InformacionUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoVisual2P"
+        mc:Ignorable="d"
+        Title="Información de Usuario" Height="250" Width="350" WindowStartupLocation="CenterScreen" Background="#FFFFFAEE" Icon="Resources/Icono.png" MinWidth="350" MaxWidth="350" MinHeight="250" MaxHeight="250">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblUsuario" Content="Usuario:" Margin="10,10,35,0" VerticalAlignment="Top" Height="23"/>
+        <Label x:Name="lblPassword" Content="Password:" Margin="10,40,25,0" VerticalAlignment="Top" Height="23"/>
+        <Label x:Name="lblNombreUsuario" Content="Nombre:" Margin="10,70,33,0" VerticalAlignment="Top" Height="23"/>
+        <Label x:Name="lblAdmin" Content="Administrador:" Margin="10,100,10,0" VerticalAlignment="Top" Height="23"/>
+        <TextBox x:Name="txtUsuario" Grid.Column="1" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Usuario}"/>
+        <TextBox x:Name="txtPassword" Grid.Column="1" Height="23" Margin="10,40,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Password}"/>
+        <TextBox x:Name="txtNombre" Grid.Column="1" Height="23" Margin="10,70,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Nombre}"/>
+        <ComboBox x:Name="cmbAdministrador" Grid.Column="1" Margin="10,100,10,0" VerticalAlignment="Top" Height="21" Text="{Binding Administrador}"/>
+        <Button x:Name="btnAceptar" Width="41" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="1" Margin="0,0,90,30" HorizontalAlignment="Right" Height="40" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="frmInformacionUsuario" Source="Resources/Accept.png" HorizontalAlignment="Left" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnCancelar" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="1" Margin="0,0,20,30" HorizontalAlignment="Right" Width="41" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Cancel.png" HorizontalAlignment="Left" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

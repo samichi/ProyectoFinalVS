@@ -1,0 +1,31 @@
+﻿<Window x:Name="frmLogin" x:Class="Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Login" Height="200" Width="280" WindowStartupLocation="CenterScreen" Icon="Resources/Icono.png" Background="#FFFFFAEE" MinWidth="280" MinHeight="200" MaxWidth="280" MaxHeight="200">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="104"/>
+            <ColumnDefinition Width="154"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnAceptar" Width="41" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="1" Margin="10,0,0,17" Grid.Row="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Accept.png" HorizontalAlignment="Left" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnCancelar" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="1" Margin="0,0,13,17" Grid.Row="1" HorizontalAlignment="Right" Width="41" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Cancel.png" HorizontalAlignment="Left" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Button>
+        <TextBox x:Name="txtUsuario" Margin="10,20,10,0" TextWrapping="Wrap" Grid.Column="1" Height="23" VerticalAlignment="Top" Text="{Binding UsuarioName}"/>
+        <Label x:Name="lblUsuario" Content="Usuario:" Margin="10,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="26"/>
+        <Label x:Name="lblPassword" Content="Contraseña:" Margin="10,68,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="80"/>
+        <PasswordBox x:Name="txtPassword" Grid.Column="1" Margin="10,68,10,0" VerticalAlignment="Top" RenderTransformOrigin="-0.2,-0.05" Height="23"/>
+
+    </Grid>
+</Window>

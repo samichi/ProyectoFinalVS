@@ -1,0 +1,60 @@
+﻿<Window x:Name="frmVendedorFactura" x:Class="VendendorFactura"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoVisual2P"
+        mc:Ignorable="d"
+        Title="Crear Factura" Height="715" Width="500" Background="#FFFFFAEE" WindowStartupLocation="CenterScreen" Icon="Resources/Icono.png" MinWidth="500" MinHeight="715" MaxWidth="500" MaxHeight="715">
+    <Grid>
+        <Label x:Name="lblNumFactura1" Content="Num. Factura:" HorizontalAlignment="Left" Margin="322,18,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="lblNumFactura2" Content="0" HorizontalAlignment="Left" Margin="322,58,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Width="142" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="lblDatosCliente" Content="Datos del Cliente" HorizontalAlignment="Left" Margin="10,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.047,-0.123" FontWeight="Bold" FontSize="15"/>
+        <Image Height="153" Margin="10,2,215,0" VerticalAlignment="Top" Source="Resources/IconoGrande.png"/>
+        <Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Margin="30,288,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCedula" Content="Cédula:" HorizontalAlignment="Left" Margin="30,318,0,0" VerticalAlignment="Top" Width="56"/>
+        <Label x:Name="lblDireccionCliente1" Content="Dirección:" HorizontalAlignment="Left" Margin="30,349,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblProvincia" Content="Provincia:" HorizontalAlignment="Left" Margin="296,160,0,0" VerticalAlignment="Top" Height="23"/>
+        <DataGrid x:Name="dtgDetalle" Margin="19,380,55,0" VerticalAlignment="Top" Height="175" ItemsSource="{Binding Detalle}"/>
+        <Label x:Name="lblSubtotal1" Content="Subtotal:" HorizontalAlignment="Left" Margin="318,0,0,96" Height="26" VerticalAlignment="Bottom"/>
+        <Label x:Name="lblSubtotal2" Content="00,00" HorizontalAlignment="Left" Margin="392,0,0,96" VerticalAlignment="Bottom" Width="44"/>
+        <Label x:Name="lblIVA1" Content="I.V.A:" HorizontalAlignment="Left" Margin="340,0,0,66" Height="26" VerticalAlignment="Bottom"/>
+        <Label x:Name="lblIVA2" Content="00,00" HorizontalAlignment="Left" Margin="392,0,0,66" VerticalAlignment="Bottom" Width="44"/>
+        <Label x:Name="lblTotalPagar1" Content="Total a Pagar:" HorizontalAlignment="Left" Margin="295,0,0,36" VerticalAlignment="Bottom"/>
+        <Label x:Name="lblTotalPagar2" Content="00,00" HorizontalAlignment="Left" Margin="392,0,0,36" VerticalAlignment="Bottom" Width="44"/>
+        <Label x:Name="lblDevolucion1" Content="Devolución:" HorizontalAlignment="Left" Margin="300,0,0,6" Foreground="Black" FontWeight="Bold" Height="26" VerticalAlignment="Bottom"/>
+        <Label x:Name="lblDevolucion2" Content="00,00" HorizontalAlignment="Left" Margin="392,0,0,6" VerticalAlignment="Bottom" Width="44" Foreground="Black" FontWeight="Bold"/>
+
+
+        <Label x:Name="lblNombreCliente" Content="XXX" HorizontalAlignment="Left" Margin="98,288,0,0" VerticalAlignment="Top" Width="349"/>
+        <Label x:Name="lblCedulaCliente" Content="XXX" Margin="98,318,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+        <Label x:Name="lblDireccionCliente" Content="XXX" HorizontalAlignment="Left" Margin="99,349,0,0" VerticalAlignment="Top" Width="348"/>
+        <ComboBox x:Name="cmbProvincia" Margin="0,160,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120"/>
+        <Label x:Name="lblDatosVendedor" Content="Datos del Vendedor" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+        <Label x:Name="lblVendedor" Content="Vendedor:" HorizontalAlignment="Left" Margin="19,225,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="lblNombreVendedor" Content="XXX" HorizontalAlignment="Left" Margin="99,225,0,0" VerticalAlignment="Top" Width="348"/>
+        <Label x:Name="lblFecha" Content="Fecha:" HorizontalAlignment="Left" Margin="296,117,0,0" VerticalAlignment="Top" Width="61"/>
+        <TextBox x:Name="txtFecha" Height="23" Margin="0,120,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120"/>
+        <Label x:Name="lblTelefono" Content="Teléfono:" HorizontalAlignment="Left" Margin="231,319,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="lblTelefonoCliente" Content="XXX" Margin="330,319,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+        <Label x:Name="lblTipoPago" Content="Tipo de Pago:" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmbTipoPago" HorizontalAlignment="Left" Margin="123,160,0,0" VerticalAlignment="Top" Width="154"/>
+        <Button x:Name="btnAgregar" Content="+" VerticalAlignment="Top" Height="30" Margin="0,380,10,0" HorizontalAlignment="Right" Width="30"/>
+        <Button x:Name="btnEliminar" Content="-" VerticalAlignment="Top" Height="30" Margin="0,428,10,0" HorizontalAlignment="Right" Width="30"/>
+        <Button x:Name="btnCancelar" Width="41" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="0" Margin="91,0,0,43" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Cancel.png" HorizontalAlignment="Left" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnAceptar" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="0" Margin="19,0,0,43" HorizontalAlignment="Left" Width="41" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Accept.png" HorizontalAlignment="Left" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnCargarClientes" Width="40" Height="40" Margin="155,248,0,0" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="40" MinHeight="40" MaxWidth="40" MaxHeight="40" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/User.png" HorizontalAlignment="Center" MinWidth="30" MinHeight="34" MaxWidth="30" MaxHeight="34" Stretch="UniformToFill"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
