@@ -70,7 +70,7 @@ Public Class EditIva
                 End Try
                 Me.Close()
             End If
-            'winIvaXProvincia.UpdateDataGrid()
+            winIvaXProvincia.UpdateDataGrid()
 
 
         End Using

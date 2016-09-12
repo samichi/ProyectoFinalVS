@@ -106,7 +106,7 @@ Public Class Categorias_Vendedor
         'winVendedorFact.dsDetalle.Tables(0).Rows.Add(fila(0), fila(1), fila(2), fila(6), txtcantidad.Text, lblSubtotal.Content)
         winVendedorFact.cmbProvincia.Items.Clear()
         winVendedorFact.cmbTipoPago.Items.Clear()
-        'winVendedorFact.UpdateDataGrid()
+        winVendedorFact.UpdateDataGrid()
         Me.Hide()
     End Sub
 
